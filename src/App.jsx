@@ -1,9 +1,10 @@
+import HomePage from "./pages/home"
 
 const App = () => {
   return (
-    <div className="flex justify-center items-center min-h-screen">
-      <div className="">Hello World</div>
-    </div>
+    <main className="">
+      <HomePage />
+    </main>
   )
 }
 
