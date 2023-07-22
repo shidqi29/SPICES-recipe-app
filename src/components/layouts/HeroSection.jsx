@@ -1,5 +1,6 @@
-import banner from "../assets";
+import banner from "../../assets";
 import PropTypes from "prop-types";
+import Button from "../elements/button/Button";
 
 const images = banner;
 const HeroSection = ({ title, image, type }) => {
@@ -25,9 +26,12 @@ const HeroSection = ({ title, image, type }) => {
               </p>
             )}
           </div>
-          <button className="text-md mt-4 text-center text-white bg-green-600  py-4 rounded-full font-bold font hover:bg-green-950">
+          <Button
+            classname="py-4 bg-green-600 mt-4 hover:bg-green-950"
+            onClick={() => {}}
+          >
             Discover the Secret
-          </button>
+          </Button>
         </div>
       </div>
     </div>
