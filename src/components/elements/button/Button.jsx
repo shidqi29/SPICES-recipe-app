@@ -1,9 +1,14 @@
 import PropTypes from "prop-types";
 
-const Button = ({ children, type = "button", classname, onClick = () => {} }) => {
+const Button = ({
+  children,
+  type = "button",
+  classname,
+  onClick = () => {},
+}) => {
   return (
     <button
-      className={`text-center text-white ${classname} rounded-full font-bold px-2`}
+      className={`text-center text-white ${classname} rounded-full font-bold px-2 outline-none`}
       type={type}
       onClick={onClick}
     >

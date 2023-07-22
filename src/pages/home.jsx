@@ -4,7 +4,7 @@ const HomePage = () => {
   return (
     <main className="w-full flex flex-col ">
       <HeroSection
-        title={<p>Unveiling Culinary Secrets with SPICES!</p>}
+        title={<p>Unlock the Hidden Flavors of International Cuisines!</p>}
         type="home"
       />
     </main>

@@ -14,15 +14,15 @@ const HeroSection = ({ title, image, type }) => {
         />
       </div>
       <div className="absolute w-full min-h-screen flex flex-col justify-center items-center top-0 z-10 bg-gradient-to-t from-black to-transparent px-4">
-        <div className="w-2/6 flex flex-col">
+        <div className="w-full md:w-2/6 flex flex-col">
           <h1 className="text-white text-3xl md:text-4xl font-bold text-center">
             {title}
           </h1>{" "}
-          <div className="text-md mt-4 text-center text-green-500 bg-[#2e1f1f90] py-4 rounded-full font-light">
+          <div className="text-md mt-4 text-center text-green-500 bg-[#2e1f1f90] py-4 rounded-full font-light px-2">
             {type && (
               <p>
-                Welcome to SPICES,
-                <br /> Unlock the Hidden Flavors of International Cuisines
+                Welcome to SPICES, a website dedicated to Sharing Palatable
+                International Culinary Experiences & Secrets
               </p>
             )}
           </div>
@@ -40,7 +40,7 @@ const HeroSection = ({ title, image, type }) => {
 
 HeroSection.propTypes = {
   image: PropTypes.string,
-  title: PropTypes.string,
+  title: PropTypes.any,
   type: PropTypes.string,
 };
 
