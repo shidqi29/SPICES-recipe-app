@@ -2,6 +2,7 @@ import { useState } from "react";
 import { BiSearchAlt2 } from "react-icons/bi";
 import Loading from "../fragments/Loading";
 import SearchBar from "../fragments/SearchBar";
+import RecipeCard from "../fragments/RecipeCard";
 
 const Recipes = () => {
   const [recipes, setRecipes] = useState([]);
@@ -26,6 +27,19 @@ const Recipes = () => {
           />
         </form>
       </div>
+      {recipes?.length > 0 ? (
+        <>
+          <div className="w-full flex flex-wrap gap-10 px-0 lg:px-10 py-10">
+            {recipes.map((item, index) => (
+              <RecipeCard key={index} recipes={item} />
+            ))}
+          </div>
+        </>
+      ) : (
+        <div className="text-white w-full items-center justify-center py-10">
+          <p className="text-center">No Recipes Found</p>
+        </div>
+      )}
     </div>
   );
 };

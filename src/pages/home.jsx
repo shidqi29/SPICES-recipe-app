@@ -10,7 +10,7 @@ const HomePage = () => {
       />
       <section
         id="recipes"
-        className="md:max-w-[1440px] mx-auto px-4 md:px-20  "
+        className="md:max-w-[1440px] mx-auto px-4 md:px-20 mt-4"
       >
         <Recipes />
       </section>
