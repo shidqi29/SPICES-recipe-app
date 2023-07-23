@@ -27,10 +27,8 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   });
   return (
-    <header
-      className={`w-full fixed z-20  bg-black ${visible ? "top-0" : ""}`}
-    >
-      <nav className=" flex w-full py-2 md:py-3 px-4 md:px-20 justify-between items-center text-white  ">
+    <header className={`fixed ${visible ? "top-0 w-full z-20 bg-black" : ""}`}>
+      <nav className=" flex w-full py-2 md:py-3 px-4 md:px-20 justify-between items-center text-white font-bold ">
         <Link
           to={"/"}
           className="flex items-center justify-center cursor-pointer"
@@ -42,7 +40,7 @@ const Navbar = () => {
           />
           SPICES
         </Link>
-        <ul className="hidden md:flex text-white gap-6">
+        <ul className="hidden md:flex text-white gap-6 ">
           <li>
             <Link to="/">Home</Link>
           </li>
@@ -63,7 +61,7 @@ const Navbar = () => {
       <div
         className={`${
           open ? "flex" : "hidden"
-        } bg-transparent flex flex-col py-4 text-white gap-6 text-[14px] border-t-2`}
+        } bg-transparent flex flex-col py-4 text-white gap-6 text-[14px] border-t-2 font-semibold`}
       >
         <Link to="/" className="w-full flex items-center justify-center">
           Home

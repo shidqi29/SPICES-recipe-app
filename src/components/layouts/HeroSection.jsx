@@ -18,7 +18,7 @@ const HeroSection = ({ title, image, type }) => {
           <h1 className="text-white text-3xl md:text-4xl font-bold text-center">
             {title}
           </h1>{" "}
-          <div className="text-md mt-4 text-center text-green-500 bg-[#2e1f1f90] py-4 rounded-full font-light px-2">
+          <div className="text-md mt-4 text-center text-green-600 bg-[#2e1f1f90] py-4 rounded-full font-light px-2">
             {type && (
               <p>
                 Welcome to SPICES, a website dedicated to Sharing Palatable
@@ -27,7 +27,7 @@ const HeroSection = ({ title, image, type }) => {
             )}
           </div>
           <Button
-            classname="py-4 bg-green-600 mt-4 hover:bg-green-950"
+            classname="py-4 bg-green-600 mt-4 hover:bg-green-900"
             onClick={() => {}}
           >
             Discover the Secret
