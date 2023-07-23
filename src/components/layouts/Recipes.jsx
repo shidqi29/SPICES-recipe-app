@@ -1,17 +1,36 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BiSearchAlt2 } from "react-icons/bi";
 import Loading from "../fragments/Loading";
 import SearchBar from "../fragments/SearchBar";
 import RecipeCard from "../fragments/RecipeCard";
+import { fetchRecipes } from "../../utils";
 
 const Recipes = () => {
   const [recipes, setRecipes] = useState([]);
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState("meat");
   const [limit, setLimit] = useState(20);
   const [loading, setLoading] = useState(false);
   const handleChange = (e) => {
     setSearch(e.target.value);
   };
+  const fetchRecipe = async () => {
+    try {
+      const data = await fetchRecipes({
+        search,
+        limit,
+      });
+      setRecipes(data);
+      setLoading(false);
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setLoading(false);
+    }
+  };
+  useEffect(() => {
+    setLoading(true);
+    fetchRecipe();
+  }, []);
 
   if (loading) {
     return <Loading />;

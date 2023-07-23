@@ -1,8 +1,5 @@
-
 const RecipeCard = () => {
-  return (
-    <div>RecipeCard</div>
-  )
-}
+  return <div>RecipeCard</div>;
+};
 
-export default RecipeCard
+export default RecipeCard;
