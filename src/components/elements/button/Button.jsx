@@ -4,7 +4,7 @@ const Button = ({
   children,
   type = "button",
   classname,
-  onClick = () => {},
+  onClick,
 }) => {
   return (
     <button

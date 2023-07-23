@@ -1,33 +1,14 @@
 import Logo from "../../assets/Spices.png";
 import { Link } from "react-router-dom";
 import Button from "../elements/button/Button";
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
-  const [visible, setVisible] = useState(true);
 
-  const handleScroll = () => {
-    const currentScrollPos = window.scrollY;
-
-    if (currentScrollPos > prevScrollPos) {
-      setVisible(false);
-    } else {
-      setVisible(true);
-    }
-
-    setPrevScrollPos(currentScrollPos);
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  });
   return (
-    <header className={`fixed ${visible ? "top-0 w-full z-20 bg-black" : ""}`}>
+    <header className={"fixed top-0 w-full z-20 bg-slate-950"}>
       <nav className=" flex w-full py-2 md:py-3 px-4 md:px-20 justify-between items-center text-white font-bold ">
         <Link
           to={"/"}
