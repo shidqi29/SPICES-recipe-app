@@ -1,4 +1,5 @@
 import HeroSection from "../components/layouts/HeroSection";
+import Recipes from "../components/layouts/recipes";
 
 const HomePage = () => {
   return (
@@ -7,6 +8,12 @@ const HomePage = () => {
         title={<p>Unlock the Hidden Flavors of International Cuisines!</p>}
         type="home"
       />
+      <section
+        id="recipes"
+        className="md:max-w-[1440px] mx-auto px-4 md:px-20  "
+      >
+        <Recipes />
+      </section>
     </main>
   );
 };

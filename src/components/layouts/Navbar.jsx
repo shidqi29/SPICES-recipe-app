@@ -47,7 +47,7 @@ const Navbar = () => {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/#explore">Explore</Link>
+            <Link to="/#recipes">Explore</Link>
           </li>
           <li>
             <Link to="/#favorites">Favorites</Link>
@@ -69,7 +69,7 @@ const Navbar = () => {
           Home
         </Link>
         <Link
-          to="/#explore"
+          to="/#recipes"
           className="w-full flex items-center justify-center"
         >
           Explore
