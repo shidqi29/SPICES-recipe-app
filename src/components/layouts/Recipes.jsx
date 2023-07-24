@@ -8,7 +8,7 @@ import Button from "../elements/button/Button";
 
 const Recipes = () => {
   const [recipes, setRecipes] = useState([]);
-  const [search, setSearch] = useState("rendang");
+  const [search, setSearch] = useState("");
   const [limit, setLimit] = useState(20);
   const [loading, setLoading] = useState(false);
   const handleChange = (e) => {
@@ -52,7 +52,7 @@ const Recipes = () => {
   return (
     <div className="w-full">
       <div className="w-full flex items-center justify-center pt-10 pb-5 px-0 md:px-10">
-        <form className="w-full lg:w-2/4" onSubmit={handleSearchRecipe}>
+        <form className="w-full md:w-full lg:2/4" onSubmit={handleSearchRecipe}>
           <SearchBar
             placeholder="What's you want to cook?"
             handleInputChange={handleChange}
@@ -73,7 +73,7 @@ const Recipes = () => {
             ))}
           </div>
           <div className="flex w-full items-center justify-center py-10">
-            <Button classname="bg-green-600 py-1 text-sm" onClick={showMore}>
+            <Button classname="bg-green-600 py-1 text-sm hover:scale-110 hover:bg-green-900" onClick={showMore}>
               Show more
             </Button>
           </div>

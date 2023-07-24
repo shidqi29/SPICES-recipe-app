@@ -1,7 +1,7 @@
 import Logo from "../../assets/Spices.png";
 import { Link } from "react-router-dom";
 import Button from "../elements/button/Button";
-import {  useState } from "react";
+import { useState } from "react";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 const Navbar = () => {
@@ -13,6 +13,9 @@ const Navbar = () => {
         <Link
           to={"/"}
           className="flex items-center justify-center cursor-pointer"
+          onClick={() =>
+            window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
+          }
         >
           <img
             src={Logo}
@@ -23,13 +26,17 @@ const Navbar = () => {
         </Link>
         <ul className="hidden md:flex text-white gap-6 ">
           <li>
-            <Link to="/">Home</Link>
+            <Link
+              to="/"
+              onClick={() =>
+                window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
+              }
+            >
+              Home
+            </Link>
           </li>
           <li>
-            <Link to="/#recipes">Explore</Link>
-          </li>
-          <li>
-            <Link to="/#favorites">Favorites</Link>
+            <a href="#recipes">Explore</a>
           </li>
         </ul>
         <Button

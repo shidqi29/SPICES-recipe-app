@@ -26,11 +26,8 @@ const HeroSection = ({ title, image, type }) => {
               </p>
             )}
           </div>
-          <Button
-            classname="py-4 bg-green-600 mt-4 hover:bg-green-900"
-            onClick={() => {}}
-          >
-            Discover the Secret
+          <Button classname="py-4 bg-green-600 mt-4 hover:bg-green-900 hover:scale-105">
+            <a href="#recipes">Discover the Secret</a>
           </Button>
         </div>
       </div>
