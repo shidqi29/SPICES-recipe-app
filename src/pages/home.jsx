@@ -1,5 +1,5 @@
 import HeroSection from "../components/layouts/HeroSection";
-import Recipes from "../components/layouts/recipes";
+import Recipes from "../components/layouts/Recipes";
 
 const HomePage = () => {
   return (
